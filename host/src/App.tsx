@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 
 const ProductList = lazy(() => import('products/productList'))
 const Cart = lazy(() => import('cart/cart'))
+// const Button = lazy(() => import('products/Button'))
 
 const links = [
   { to: '/', label: 'Home' },
@@ -30,7 +31,12 @@ const App = () => {
         ))}
       </nav>
       <main style={{ padding: 16 }}>
+        {/* <Button onClick={() => alert('Button from products remote clicked!')}>
+          Remote Button
+        </Button> */}
+        <hr />
         <Suspense fallback={<p>Loading...</p>}>
+
           <Routes>
             <Route path="/" element={<h2>Home page</h2>} />
             <Route path="/products" element={<ProductList />} />
