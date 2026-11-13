@@ -1,0 +1,9 @@
+node_modules
+dist
+.mf
+@mf-types
+graphify-out
+.DS_Store
+*.log
+.env
+.env.*
